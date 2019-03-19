@@ -20,8 +20,8 @@
 
     <target name="checkstyle" depends="checkinit">
         <!-- CheckStyle  -->
-        <checkstyle config="${basedir}\documentation\sun_checks.xml">
-			<formatter type="xml" tofile="checkstyle_report.xml"/>
+        <checkstyle config="${basedir}\documentation\sun_checks.xml" failOnViolation="false">
+			<formatter type="xml" tofile="checkstyle-result.xml"/>
             <path refid="check.sourcepath" />
         </checkstyle>
     </target>
